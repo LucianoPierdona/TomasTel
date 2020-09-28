@@ -1,12 +1,13 @@
 import React from "react";
+import { HeaderContainer } from "./style";
 
 const Header = () => {
   return (
-    <div>
+    <HeaderContainer>
       <h1>
         Tel<span>zir</span>
       </h1>
-    </div>
+    </HeaderContainer>
   );
 };
 
