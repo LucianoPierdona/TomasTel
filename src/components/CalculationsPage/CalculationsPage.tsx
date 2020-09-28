@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { data } from "../../data";
 import {
@@ -11,6 +11,11 @@ import {
 } from "./style";
 
 const CalculationsPage = () => {
+  const [originDDD, setOriginDDD] = useState(parseInt("011"));
+  const [destinyDDD, setDestinyDDD] = useState(parseInt("011"));
+  const [minutes, setMinutes] = useState(0);
+  const [planType, setPlanType] = useState("Selecione");
+
   return (
     <CalculationsContent className="animate__animated animate__fadeIn">
       <form>
@@ -21,7 +26,14 @@ const CalculationsPage = () => {
               <label>Origem</label>
               <select name="ddd-origem" required>
                 {data.ddd.map((ddd) => {
-                  return <option value="ddd">{ddd}</option>;
+                  return (
+                    <option
+                      value={originDDD}
+                      onClick={() => setOriginDDD(parseInt(ddd))}
+                    >
+                      {ddd}
+                    </option>
+                  );
                 })}
               </select>
             </SelectContainer>
@@ -29,7 +41,14 @@ const CalculationsPage = () => {
               <label>Destino</label>
               <select name="ddd-origem" required>
                 {data.ddd.map((ddd) => {
-                  return <option value={ddd}>{ddd}</option>;
+                  return (
+                    <option
+                      value={destinyDDD}
+                      onClick={() => setDestinyDDD(parseInt(ddd))}
+                    >
+                      {ddd}
+                    </option>
+                  );
                 })}
               </select>
             </SelectContainer>
@@ -43,6 +62,8 @@ const CalculationsPage = () => {
               name="minutes"
               placeholder="Digite aqui os minutos"
               required
+              value={minutes}
+              onChange={(e) => setMinutes(parseInt(e.target.value))}
             />
           </InputContainer>
         </div>
@@ -53,7 +74,11 @@ const CalculationsPage = () => {
               <label>Plano</label>
               <select name="ddd-origem" required>
                 {data.plans.map((plan) => {
-                  return <option value={plan}>{plan}</option>;
+                  return (
+                    <option value={planType} onClick={() => setPlanType(plan)}>
+                      {plan}
+                    </option>
+                  );
                 })}
               </select>
             </SelectContainer>
