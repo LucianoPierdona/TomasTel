@@ -22,10 +22,10 @@ escolher o codigo das cidades de origem e destino, o tempo da ligação em minutos
 
 ========================Todo=========================
 
-criar data com os planos sem o falemais,
-criar data com os tabelamentos de preço para cada tipo
-criar interface para o usuário calcular os dados (Web e mobile)
-criar a lógica para calcular cada vez que o usuario calcular
-disponibilizar uma tabela com os dados solicitados pelo usuário
+criar data com os planos sem o falemais, X
+criar data com os tabelamentos de preço para cada tipo X
+criar interface para o usuário calcular os dados (Web e mobile) X
+criar a lógica para calcular cada vez que o usuario calcular X
+disponibilizar uma tabela com os dados solicitados pelo usuário X
 fazer os testes
-enviar para o github ou para um zip
+enviar para o github ou para um zip X

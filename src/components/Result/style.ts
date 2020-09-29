@@ -14,6 +14,10 @@ export const ResultBlock = styled.div`
   width: 50%;
   justify-content: space-between;
   margin: 0 auto;
+  @media (max-width: 768px) {
+    width: 100%;
+    margin: 20px auto;
+  }
 `;
 
 export const Card = styled.div`
@@ -29,6 +33,11 @@ export const Card = styled.div`
     }
     & strong#green {
       color: #10fa10;
+    }
+  }
+  @media (max-width: 768px) {
+    & h1 {
+      font-size: 22px;
     }
   }
 `;

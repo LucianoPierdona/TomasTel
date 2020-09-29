@@ -99,11 +99,10 @@ const CalculationsPage = () => {
           </FormOptions>
         </div>
         <div>
-          <Title>Selecione o tempo que você irá usar</Title>
+          <Title>Selecione o tempo que você irá usar (Em Minutos)</Title>
           <InputContainer>
             <input
               type="number"
-              placeholder="Digite aqui os minutos"
               value={minutes}
               onChange={(e) => setMinutes(parseInt(e.target.value))}
               required

@@ -6,6 +6,11 @@ import { Card, ResultBlock, ResultContainer } from "./style";
 const Result = () => {
   const history: any = useHistory();
   // Aqui é consultado os valores que foram escolhidos pelo usuário e o resultado
+
+  if (!history.location.state.response) {
+    history.push("/calculate");
+  }
+
   const {
     destinyDDD,
     fixedPrice,
