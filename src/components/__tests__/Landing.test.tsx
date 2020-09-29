@@ -37,5 +37,5 @@ it("Have the text on title and paragraph", () => {
 });
 
 it("When click on the Link, move the user to CalculationsPage", () => {
-  expect(wrapped.find("a").simulate("click"));
+  expect(wrapped.find("a").simulate("click", { target: CalculationsPage }));
 });

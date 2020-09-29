@@ -15,7 +15,7 @@ afterEach(() => {
   wrapped.unmount();
 });
 
-it("Have and h1 and a span", () => {
+it("Have and h1 and a span block", () => {
   expect(wrapped.find("h1").length).toEqual(1);
   expect(wrapped.find("span").length).toEqual(1);
 });

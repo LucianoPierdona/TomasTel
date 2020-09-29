@@ -77,22 +77,32 @@ const CalculationsPage = () => {
             <SelectContainer>
               <label>Origem</label>
               <select
+                id="originDDD"
                 onChange={(e) => setOriginDDD(parseInt(e.target.value))}
                 required
               >
                 {data.ddd.map((ddd) => {
-                  return <option value={ddd}>{ddd}</option>;
+                  return (
+                    <option key={ddd} id={`a${ddd}`} value={ddd}>
+                      {ddd}
+                    </option>
+                  );
                 })}
               </select>
             </SelectContainer>
             <SelectContainer>
               <label>Destino</label>
               <select
+                id="destinyDDD"
                 required
                 onChange={(e) => setDestinyDDD(parseInt(e.target.value))}
               >
                 {data.ddd.map((ddd) => {
-                  return <option value={ddd}>{ddd}</option>;
+                  return (
+                    <option key={ddd} id={`b${ddd}`} value={ddd}>
+                      {ddd}
+                    </option>
+                  );
                 })}
               </select>
             </SelectContainer>
@@ -115,12 +125,16 @@ const CalculationsPage = () => {
             <SelectContainer>
               <label>Plano</label>
               <select
-                name="ddd-origem"
+                id="planSelect"
                 onChange={(e) => setPlanType(e.target.value)}
                 required
               >
                 {data.plans.map((plan) => {
-                  return <option value={plan}>{plan}</option>;
+                  return (
+                    <option key={plan} id={plan.replace(/ /g, "")} value={plan}>
+                      {plan}
+                    </option>
+                  );
                 })}
               </select>
             </SelectContainer>
