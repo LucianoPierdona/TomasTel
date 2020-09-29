@@ -2,6 +2,10 @@ import styled from "styled-components";
 
 export const CalculationsContent = styled.div`
   padding: 60px 0;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  flex: 1;
 `;
 
 export const Title = styled.div`
@@ -62,13 +66,17 @@ export const InputContainer = styled.div`
 
 export const CalculateButtonContainer = styled.div`
   margin-top: 35px;
+  button,
   a {
+    outline: none;
     padding: 10px 25px;
+    border: 0;
     border-radius: 12px;
     text-decoration: none;
     color: #ffdbc5;
     background: #cf1b1b;
     transition: 0.2s;
+    cursor: pointer;
     &:hover {
       color: #cf1b1b;
       background: #ffdbc5;

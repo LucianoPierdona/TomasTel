@@ -1,8 +1,6 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import { data } from "../../data";
-import Result from "../Result/Result";
-import { Calculation } from "./components/Calculation";
 import {
   CalculateButtonContainer,
   CalculationsContent,
@@ -17,6 +15,7 @@ const CalculationsPage = () => {
   const [destinyDDD, setDestinyDDD] = useState(11);
   const [minutes, setMinutes] = useState(0);
   const [planType, setPlanType] = useState("Selecione");
+  const history = useHistory();
 
   const onFormSubmit = (
     originDDD: number,
@@ -24,7 +23,42 @@ const CalculationsPage = () => {
     minutes: number,
     planType: string
   ) => {
-    return Calculation(originDDD, destinyDDD, minutes, planType);
+    return data.details.map((detail) => {
+      let discountValue = 0;
+      if (planType === "FaleMais 30") discountValue = 30;
+      if (planType === "FaleMais 60") discountValue = 60;
+      if (planType === "FaleMais 120") discountValue = 120;
+
+      const originDataDDD = parseInt(detail.origin);
+      const destinyDataDDD = parseInt(detail.destiny);
+
+      if (originDataDDD === originDDD && destinyDataDDD === destinyDDD) {
+        const normalPrice = detail.pricePerMinute * minutes;
+        let planPrice = minutes - discountValue;
+
+        planPrice < 0 ? (planPrice = 0) : (planPrice = planPrice + 0); // the last + 0 is to remove warning;
+        let costPerMinute = detail.pricePerMinute * 1.1;
+
+        planPrice *= costPerMinute;
+        let fixedPrice = planPrice.toFixed(2);
+        let resultData = {
+          originDDD,
+          destinyDDD,
+          minutes,
+          planType,
+          normalPrice,
+          fixedPrice,
+        };
+
+        return history.push({
+          pathname: "/result",
+          state: {
+            response: resultData,
+          },
+        });
+      }
+      return null;
+    });
   };
 
   return (
@@ -92,8 +126,7 @@ const CalculationsPage = () => {
           </FormOptions>
         </div>
         <CalculateButtonContainer>
-          <button type="submit">Enviar</button>
-          <Link to="/result">Calcular</Link>
+          <button type="submit">Calcular</button>
         </CalculateButtonContainer>
       </form>
     </CalculationsContent>

@@ -1,43 +1,53 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { CalculateButtonContainer } from "../CalculationsPage/style";
 import { Card, ResultBlock, ResultContainer } from "./style";
 
 const Result = () => {
+  const history: any = useHistory();
+  console.log(history);
+  const {
+    destinyDDD,
+    fixedPrice,
+    minutes,
+    normalPrice,
+    originDDD,
+    planType,
+  } = history.location.state.response;
   return (
     <ResultContainer className="animate__animated animate__fadeIn">
       <h1>Resultado</h1>
       <ResultBlock>
         <Card>
           <h1>DDD Origem</h1>
-          <p>011</p>
+          <p>{originDDD}</p>
         </Card>
         <Card>
           <h1>DDD Destino</h1>
-          <p>018</p>
+          <p>{destinyDDD}</p>
         </Card>
       </ResultBlock>
       <ResultBlock>
         <Card>
           <h1>Minutos</h1>
-          <p>59</p>
+          <p>{minutes}</p>
         </Card>
         <Card>
           <h1>Plano</h1>
-          <p>FaleMais 60</p>
+          <p>{planType}</p>
         </Card>
       </ResultBlock>
       <ResultBlock>
         <Card>
           <h1>Sem o Plano</h1>
           <p>
-            <strong id="red">19.90</strong>
+            <strong id="red">R$ {normalPrice}</strong>
           </p>
         </Card>
         <Card>
           <h1>Com o Plano</h1>
           <p>
-            <strong id="green">0.00</strong>
+            <strong id="green">R$ {fixedPrice}</strong>
           </p>
         </Card>
       </ResultBlock>
