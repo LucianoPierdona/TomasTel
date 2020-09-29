@@ -10,6 +10,7 @@ import {
   Title,
 } from "./style";
 
+// Pagina onde o usuário escolhe os dados para serem cálculados
 const CalculationsPage = () => {
   const [originDDD, setOriginDDD] = useState(11);
   const [destinyDDD, setDestinyDDD] = useState(11);
@@ -17,6 +18,7 @@ const CalculationsPage = () => {
   const [planType, setPlanType] = useState("Selecione");
   const history = useHistory();
 
+  // Faz os cálculos (acabei deixando ele nesta pasta pelo uso do hook useHistory)
   const onFormSubmit = (
     originDDD: number,
     destinyDDD: number,
@@ -36,7 +38,7 @@ const CalculationsPage = () => {
         const normalPrice = detail.pricePerMinute * minutes;
         let planPrice = minutes - discountValue;
 
-        planPrice < 0 ? (planPrice = 0) : (planPrice = planPrice + 0); // the last + 0 is to remove warning;
+        planPrice < 0 ? (planPrice = 0) : (planPrice = planPrice + 0); // O ultimo 0 é para remover o aviso no console.
         let costPerMinute = detail.pricePerMinute * 1.1;
 
         planPrice *= costPerMinute;

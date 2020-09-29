@@ -4,6 +4,7 @@ import CalculationsPage from "./components/CalculationsPage/CalculationsPage";
 import Landing from "./components/Landing/Landing";
 import Result from "./components/Result/Result";
 
+// Aqui é definido as rotas da aplicação
 export default function Routes() {
   return (
     <BrowserRouter>

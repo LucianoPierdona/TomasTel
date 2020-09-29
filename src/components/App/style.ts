@@ -1,5 +1,6 @@
 import styled from "styled-components";
 
+// Estilização
 export const LayoutContainer = styled.div`
   width: 90%;
   border-radius: 12px;
@@ -17,6 +18,7 @@ export const ContentContainer = styled.div`
   text-align: center;
 `;
 
+// Color Pallette
 // #ffdbc5
 // #cf1b1b
 // #900d0d

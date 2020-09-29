@@ -2,10 +2,10 @@ import React from "react";
 import { Link, useHistory } from "react-router-dom";
 import { CalculateButtonContainer } from "../CalculationsPage/style";
 import { Card, ResultBlock, ResultContainer } from "./style";
-
+// Aqui é a tela do resultado dos cálculos
 const Result = () => {
   const history: any = useHistory();
-  console.log(history);
+  // Aqui é consultado os valores que foram escolhidos pelo usuário e o resultado
   const {
     destinyDDD,
     fixedPrice,
