@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import { data } from "../../data";
+
 import {
   CalculateButtonContainer,
   CalculationsContent,
@@ -38,7 +39,7 @@ const CalculationsPage = () => {
         const normalPrice = detail.pricePerMinute * minutes;
         let planPrice = minutes - discountValue;
 
-        planPrice < 0 ? (planPrice = 0) : (planPrice = planPrice + 0); // O ultimo 0 é para remover o aviso no console.
+        planPrice < 0 ? (planPrice = 0) : (planPrice += 0); // O ultimo 0 é para remover o aviso no console.
         let costPerMinute = detail.pricePerMinute * 1.1;
 
         planPrice *= costPerMinute;

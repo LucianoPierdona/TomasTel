@@ -1,7 +1,9 @@
 import React from "react";
 import { Link, useHistory } from "react-router-dom";
+
 import { CalculateButtonContainer } from "../CalculationsPage/style";
 import { Card, ResultBlock, ResultContainer } from "./style";
+
 // Aqui é a tela do resultado dos cálculos
 const Result = () => {
   const history: any = useHistory();
@@ -14,6 +16,7 @@ const Result = () => {
     originDDD,
     planType,
   } = history.location.state.response;
+
   return (
     <ResultContainer className="animate__animated animate__fadeIn">
       <h1>Resultado</h1>
