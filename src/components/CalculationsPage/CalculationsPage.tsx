@@ -37,6 +37,8 @@ const CalculationsPage = () => {
 
       if (originDataDDD === originDDD && destinyDataDDD === destinyDDD) {
         const normalPrice = detail.pricePerMinute * minutes;
+        normalPrice.toFixed(2);
+
         let planPrice = minutes - discountValue;
 
         planPrice < 0 ? (planPrice = 0) : (planPrice += 0); // O ultimo 0 é para remover o aviso no console.
