@@ -28,9 +28,9 @@ const CalculationsPage = () => {
   ) => {
     return data.details.map((detail) => {
       let discountValue = 0;
-      if (planType === "FaleMais 30") discountValue = 30;
-      if (planType === "FaleMais 60") discountValue = 60;
-      if (planType === "FaleMais 120") discountValue = 120;
+      if (planType === "Tomas-Pago 30") discountValue = 30;
+      if (planType === "Tomas-Pago 60") discountValue = 60;
+      if (planType === "Tomas-Pago 120") discountValue = 120;
 
       const originDataDDD = parseInt(detail.origin);
       const destinyDataDDD = parseInt(detail.destiny);

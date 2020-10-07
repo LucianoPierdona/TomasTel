@@ -1,7 +1,7 @@
 // Aqui estão todos os dados necessários
 export const data = {
   ddd: ["Selecione", "055", "054", "053", "051"],
-  plans: ["Selecione", "Pré-Pago 30", "Pré-Pago 60", "Pré-Pago 120"],
+  plans: ["Selecione", "Tomas-Pago 30", "Tomas-Pago 60", "Tomas-Pago 120"],
   details: [
     {
       origin: "051",
