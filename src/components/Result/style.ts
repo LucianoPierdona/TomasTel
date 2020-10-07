@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-// Estilização
+// Styling for the result page
 export const ResultContainer = styled.div`
   width: 90%;
   margin: 0 auto;

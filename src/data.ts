@@ -1,37 +1,67 @@
 // Aqui estão todos os dados necessários
 export const data = {
-  ddd: ["Selecione", "011", "016", "017", "018"],
-  plans: ["Selecione", "FaleMais 30", "FaleMais 60", "FaleMais 120"],
+  ddd: ["Selecione", "055", "054", "053", "051"],
+  plans: ["Selecione", "Pré-Pago 30", "Pré-Pago 60", "Pré-Pago 120"],
   details: [
     {
-      origin: "011",
-      destiny: "016",
-      pricePerMinute: 1.9,
+      origin: "051",
+      destiny: "055",
+      pricePerMinute: 2.23,
     },
     {
-      origin: "011",
-      destiny: "017",
-      pricePerMinute: 1.7,
+      origin: "051",
+      destiny: "054",
+      pricePerMinute: 2.34,
     },
     {
-      origin: "011",
-      destiny: "018",
-      pricePerMinute: 0.9,
+      origin: "051",
+      destiny: "053",
+      pricePerMinute: 2.12,
     },
     {
-      origin: "016",
-      destiny: "011",
-      pricePerMinute: 2.9,
+      origin: "053",
+      destiny: "051",
+      pricePerMinute: 0.45,
     },
     {
-      origin: "017",
-      destiny: "011",
-      pricePerMinute: 2.7,
+      origin: "053",
+      destiny: "054",
+      pricePerMinute: 1.74,
     },
     {
-      origin: "018",
-      destiny: "011",
-      pricePerMinute: 1.9,
+      origin: "053",
+      destiny: "055",
+      pricePerMinute: 2.14,
+    },
+    {
+      origin: "054",
+      destiny: "051",
+      pricePerMinute: 3.51,
+    },
+    {
+      origin: "054",
+      destiny: "053",
+      pricePerMinute: 3.1,
+    },
+    {
+      origin: "054",
+      destiny: "055",
+      pricePerMinute: 2.94,
+    },
+    {
+      origin: "055",
+      destiny: "051",
+      pricePerMinute: 0.94,
+    },
+    {
+      origin: "055",
+      destiny: "053",
+      pricePerMinute: 1.53,
+    },
+    {
+      origin: "055",
+      destiny: "054",
+      pricePerMinute: 1.75,
     },
   ],
 };

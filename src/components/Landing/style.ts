@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-// Estilização
+// Styling for the Landing Page
 export const LandingContent = styled.div`
   padding: 100px 0;
   & h1 {

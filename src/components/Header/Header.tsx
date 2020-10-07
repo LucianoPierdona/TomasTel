@@ -2,12 +2,12 @@ import React from "react";
 
 import { HeaderContainer } from "./style";
 
-// Aqui é o Header no qual é utilizado em todas as telas.
+// Header Of The Application
 const Header = () => {
   return (
     <HeaderContainer>
       <h1>
-        Tel<span>zir</span>
+        Tomas<span>Tel</span>
       </h1>
     </HeaderContainer>
   );

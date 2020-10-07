@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-// Estilização
+// Styling for the Header
 export const HeaderContainer = styled.div`
   background: #cf1b1b;
   width: 100%;

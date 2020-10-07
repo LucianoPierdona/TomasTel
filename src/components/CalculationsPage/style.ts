@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-// Estilização
+// Styling for the calculations Page
 export const CalculationsContent = styled.div`
   padding: 60px 0;
   display: flex;

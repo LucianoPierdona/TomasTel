@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import { LandingContent } from "./style";
 
-// Aqui é a página inicial.
+// Initial Page
 const Landing = () => {
   return (
     <LandingContent className="animate__animated animate__fadeIn">

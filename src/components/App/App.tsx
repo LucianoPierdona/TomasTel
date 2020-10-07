@@ -5,7 +5,7 @@ import Header from "../Header/Header";
 
 import { ContentContainer, LayoutContainer } from "./style";
 
-// Layout principal da página
+// Page Layout
 function App() {
   return (
     <LayoutContainer>

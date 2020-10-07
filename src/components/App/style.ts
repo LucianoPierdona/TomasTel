@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-// Estilização
+// Layout Styling
 export const LayoutContainer = styled.div`
   width: 90%;
   border-radius: 12px;
