@@ -1,30 +1,33 @@
 # TomasTel
 
-# Como Usar
+### Project Made with React using Typescript
 
-Primeiro instale as dependencias com
+A Simple Project to calculate tax values between calls from cities in my state.
 
+<p>
+  <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
+  <a href="#" target="_blank">
+    <img alt="License: ISC" src="https://img.shields.io/badge/License-ISC-yellow.svg" />
+  </a>
+  <a href="https://twitter.com/Lucianompjr" target="_blank">
+    <img alt="Twitter: Lucianompjr" src="https://img.shields.io/twitter/follow/Lucianompjr.svg?style=social" />
+  </a>
+</p>
+
+# Usage
+
+First Install the components with 
 ```
 npm install
-# ou
+# or
 yarn add
 
 ```
-
-depois inicie com
-
+Then run with
 ```
 npm start
-# ou
+# or
 yarn start
 
 ```
 
-Para Os Testes
-
-```
-npm run test
-# ou
-yarn test
-
-```
